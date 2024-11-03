@@ -1,0 +1,25 @@
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hogList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .hogTile {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .hogImage {
+    max-width: 100%;
+    height: auto;
+  }
+  

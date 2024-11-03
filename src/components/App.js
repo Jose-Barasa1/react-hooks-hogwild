@@ -1,14 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./Nav";
-
-import hogs from "../porkers_data";
+import HogList from "./HogList";
+import HogDetails from "./HogDetails";
+import "./style.css"
 
 function App() {
-	return (
-		<div className="App">
-			<Nav />
-		</div>
-	);
+  return (
+    <Router>
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<HogList />} />
+          <Route path="/hog/:name" element={<HogDetails />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
