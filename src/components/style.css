@@ -1,3 +1,76 @@
+/* General form container styling */
+.addHogForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: beige;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Style each form field (input and label) */
+.addHogForm label {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+/* Adjust input fields to be inline with some spacing */
+.addHogForm input[type="text"],
+.addHogForm input[type="number"],
+.addHogForm input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Adjust checkbox styling */
+.addHogForm input[type="checkbox"] {
+  width: auto;
+  margin-left: 8px;
+}
+
+/* Image preview styling */
+.addHogForm img {
+  max-width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the submit button */
+.addHogForm button {
+  width: auto;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.addHogForm button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
 .controls {
     display: flex;
     gap: 1rem;
@@ -10,14 +83,61 @@
     gap: 1rem;
   }
   
-  .hogTile {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    cursor: pointer;
-    width: 200px;
-    text-align: center;
-  }
-  
+  /* Container for each hog tile */
+.hogTile {
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  background-color: beige;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hogTile:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the hog's name */
+.hogTile h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Styling the image */
+.hogTile img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.hogTile button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hogTile button:hover {
+  background-color: #45a049;
+}
+
+/* Optional: Add a transition for visibility toggle */
+.hogTile.hidden {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
   .hogImage {
     max-width: 100%;
     height: auto;
